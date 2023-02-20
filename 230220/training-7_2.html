@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <h1>그린컴퓨터아트학원 3층 자판기</h1>
+    <div>
+      <h2>밀키스가격</h2>
+      <p>900</p>
+    </div>
+    <div>
+      <h2>코카콜라가격</h2>
+      <p>2800</p>
+    </div>
+    <div>
+      <h2>원장님조르기</h2>
+      <p>0</p>
+    </div>
+    <script>
+      var root = document.getElementById('root');
+      console.log("첫번째 :", root);
+      // 0부터 시작
+      var milkis = root.children[1];
+      console.log("두번째 :", milkis);
+      // innerText과 textContent차이:innerText는 눈에 보이는 값만 반환하고 textContent는 눈에 보이지않는 값도 반환한다 
+      var milkisPrice = milkis.children[1].textContent;
+      console.log("세번째 :", milkisPrice);
+      // Number 문자열을 숫자로 변환하는 함수
+      var numberChangeMilkisPrice = Number(milkisPrice);
+      console.log("네번째 :", numberChangeMilkisPrice);
+      // typeof변수의 데이터 타입을 반환하는 연산자로 아래는 숫자이므로 number가 나온다
+      console.log("다섯번째 :", typeof(numberChangeMilkisPrice));
+    </script>
+  </div>
+</body>
+</html>
