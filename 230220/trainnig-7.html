@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 밀키스와 콜라의 가격차이를 산출해내고 콘솔에 찍기 -->
+  <!--  1,2만(밀키스,콜라)만 찾기  -->
+  <!-- 그다음에는 빼기 -->
+  <!-- html의 구조파악하기 -->
+  <div id="root">
+    <h1>그린컴퓨터아트학원 3층 자판기</h1>
+    <div>
+      <h2>밀키스가격</h2>
+      <p>900</p>
+    </div>
+    <div>
+      <h2>코카콜라가격</h2>
+      <p>2800</p>
+    </div>
+    <div>
+      <h2>원장님조르기</h2>
+      <p>0</p>
+    </div>
+  </div>
+  <script>
+    // 1번
+    var cokeprice=2800;
+    var milkprice=900;
+    console.log(cokeprice-milkprice);
+    // 2번 문서에서 가지고 온값 - 옆에 있는 값
+    var result=2800-900;
+    console.dir(document.getElementById("root").children[1].children[1].textContent);
+    console.dir(document.getElementById("root").children[2].children[1].textContent);
+    console.log(document.getElementById("root").children[2].children[1].textContent)-(document.getElementById("root").children[1].children[1].textContent);
+
+
+    /* 이것도 내가 한 것
+    const divNode=document.getElementById('root');
+    console.log(divNode.innerText);
+
+    let a=document.getElementById('root');
+    console.log(a.children[1],a.children[2]);
+
+    children=document.querySelector('p')
+    console.log(children)
+
+    const a=document.querySelector('#root:nth-child(1)');
+    console.log(a);*/
+
+    /* 내가 한 것 두번째는 실행X
+    var a=document.querySelectorAll('p');
+    console.log(a);
+    let c1=a[0];
+    let c2=a[1];
+    console.log(c2-c1);
+    var b=document.getElementById('root').innerText;
+    console.log(b);*/
+
+    // let divs=document.getElementsByTagName("div");
+    // let div1=divs[1];
+    // console.log(divs1)
+  </script>
+</body>
+</html>
